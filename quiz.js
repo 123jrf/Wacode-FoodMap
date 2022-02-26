@@ -2,8 +2,11 @@ var quizContainer = document.getElementById('quiz-question');
 var resultsContainer = document.getElementById('quiz-results');
 var submitButton = document.getElementById('quiz-submit');
 
-quizContainer.innerHTML = "<p>Hello, world!</p>";
-
-submitButton.onclick() = function {
-	resultsContainer.innerHTML = "<p>Hello, World!</p>";
+function helloworld() {
+	let inputVal = document.getElementById("quiz-entry").value;
+	resultsContainer.innerHTML = inputVal;
 }
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  quizContainer.innerHTML = "<p>Hello, world!</p>";
+});
