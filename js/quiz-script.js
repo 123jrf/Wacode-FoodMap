@@ -6,11 +6,14 @@ var answerLabel = document.getElementById("answer-label");
 var correctAnswers = 0;
 
 var questions = [
+	["<h3>What year did the United Nations declare food insecurity a global problem?</h3>", 2001,
+		"In <b>2001</b>, food insecurity was declared a global problem, but even 20 years later it persists!", ""],
+	["<h3>What rank is food insecurity out of the UN's Top 17 World Issues?", 2,
+		"Food insecurity is ranked at <b>2nd</b> out of the top issues in the world!", ""],
 	["<h3>What percentage of Americans do you think are food insecure before COVID-19?</h3>", 12.5,
-		"<p>In 2020, an estimated 1 in 8 <b>(12.5%)</b> Americans were food insecure, equating to over <strong>38 million</strong> Americans, including almost <strong>12 million children</strong>. <a href=https://hungerandhealth.feedingamerica.org/understand-food-insecurity/>[Source]</a></p>"],
+		"<p>In 2020, an estimated 1 in 8 <b>(12.5%)</b> Americans were food insecure, equating to over <strong>38 million</strong> Americans, including almost <strong>12 million children</strong>. <a href=https://hungerandhealth.feedingamerica.org/understand-food-insecurity/>[Source]</a></p>", "%"],
 	["<h3>What percentage of Americans do you think are food insecure since the pandemic?</h3>", 25,
-		"<p>Since the onset of COVID-19, food insecurity has <strong>doubled</strong> to around <strong>25%</strong> in the United States.</p>"
-	]
+		"<p>Since the onset of COVID-19, food insecurity has <strong>doubled</strong> to around <strong>25%</strong> in the United States.</p>", "%"]
 ]
 
 var button_texts = [
@@ -42,9 +45,13 @@ function quizbtnpress() {
 		if (inputVal == "NaN") {
 			console.log("No");
 		}
-		else if ((inputVal > answerVal*0.9) && (inputVal < answerVal*1.1)) {
+		else if (inputVal === answerVal) {
 			result = "<p><b>Correct!</b></p>";
 			correctAnswers += 1;
+		}
+		else if ((inputVal > answerVal-2) && (inputVal < answerVal+2)) {
+			result = "<p><b>Close!</b></p>";
+			correctAnswers += 0.5;
 		}
 		else {
 			result = "<p><b>Incorrect!</b></p>";
@@ -52,7 +59,7 @@ function quizbtnpress() {
 		
 		// Set the results text
 		textEntry.style.visibility = "hidden";
-		answerLabel.innerHTML = "Your answer: <b>" + inputVal.toString() + "%</b>";
+		answerLabel.innerHTML = "Your answer: <b>" + inputVal.toString() + questions[(current_question) / 2][3] + "</b>";
 		quizContainer.innerHTML = result + questions[(current_question) / 2][2];
 		
 	}
