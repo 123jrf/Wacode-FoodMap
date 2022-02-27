@@ -1,5 +1,8 @@
+:root{
+    --main-orange: #f4623a;
+}
+
 .tb_map_container{
-    display: block;
     max-width: 90%;
     margin-inline: auto;
 }
