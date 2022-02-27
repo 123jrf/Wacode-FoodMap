@@ -108,11 +108,11 @@
                               </button>
                             </div>
                             <div class="modal-body p-5">
-                                <h2>Input question here</h2>
+                                <h2 id="quiz-question">Input question here</h2>
                                 <div>
-                                    <label for="answer_field" class="form-label">Put in your answer:</label>
+                                    <label for="answer_field" class="form-label" id="answer-label">Put in your answer:</label>
                                     <input type="email" class="form-control mb-3" id="answer_field">
-                                    <button type="submit" class="btn btn-primary btn-xl">Check your answer</button>
+                                    <button type="submit" class="btn btn-primary btn-xl" id="quiz-submit" onclick="quizbtnpress()">Check your answer</button>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -120,6 +120,7 @@
                           </div>
                         </div>
                       </div>
+					  <script src="js/quiz-script.js"></script>
 
                 </div>
             </div>
