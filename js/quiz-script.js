@@ -3,6 +3,8 @@ var submitButton = document.getElementById('quiz-submit');
 var textEntry = document.getElementById("answer_field");
 var answerLabel = document.getElementById("answer-label");
 
+var correctAnswers = 0;
+
 var questions = [
 	["<h3>What percentage of Americans do you think are food insecure before COVID-19?</h3>", 12.5,
 		"<p>In 2020, an estimated 1 in 8 <b>(12.5%)</b> Americans were food insecure, equating to over <strong>38 million</strong> Americans, including almost <strong>12 million children</strong>. <a href=https://hungerandhealth.feedingamerica.org/understand-food-insecurity/>[Source]</a></p>"],
@@ -22,7 +24,8 @@ var current_question = 0;
 function quizbtnpress() {
 	// If current question is even, check answer, if it's odd, move to the next question
 	if (current_question / 2 > questions.length - 1) {
-		quizContainer.innerHTML = "<p>That's all the questions.</p>";
+		quizContainer.innerHTML = "<h3>That's all the questions!</h3>";
+		answerLabel.innerHTML = "Your score: <b>" + correctAnswers.toString() + "/" + questions.length.toString() + " (" + Math.round(correctAnswers * 100 / questions.length) + "%).</b>";
 		
 		textEntry.remove();
 		submitButton.remove();
@@ -41,6 +44,7 @@ function quizbtnpress() {
 		}
 		else if ((inputVal > answerVal*0.9) && (inputVal < answerVal*1.1)) {
 			result = "<p><b>Correct!</b></p>";
+			correctAnswers += 1;
 		}
 		else {
 			result = "<p><b>Incorrect!</b></p>";
