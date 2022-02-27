@@ -6,3 +6,14 @@
     max-width: 90%;
     margin-inline: auto;
 }
+
+.close-2{
+    background-color: white;
+    outline: none;
+    border: none;
+}
+
+.close-2:hover{
+    font-weight: bold;
+    color: var(--main-orange);
+}

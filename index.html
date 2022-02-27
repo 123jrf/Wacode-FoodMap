@@ -37,7 +37,6 @@
                     <li class="nav-item"><a class="nav-link" href="#knowledgeCheck">Knowledge Check</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -62,7 +61,7 @@
     </header>
     <!-- Map -->
     <section class="page-section my-0">
-        <h2 class="text-center">Find out about food insecurity in you community</h2>
+        <h2 class="text-center">Find out about food insecurity in your community</h2>
         <hr class="divider">
 
         <div class="tb_map_container">
@@ -95,86 +94,75 @@
                 <div class="col-lg-8 text-center">
                     <h2 class="text-white mt-0">Knowledge Check</h2>
                     <hr class="divider divider-light" />
-                    <p class="text-white-75 mb-4">How much do you know about food insecurity</p>
-                    <a class="btn btn-light btn-xl" href="#services">Test Yourself</a>
+                    <p class="text-white-75 mb-4">Take this quiz to test your knowledge on food insecurity</p>
+                    <button type="button" class="btn btn-light btn-xl" data-bs-toggle="modal" data-bs-target="#quiz_popup">Test Yourself</button>
+
+                    <!-- Quiz Popup -->
+                    <div class="modal fade" id="quiz_popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Knowledge Check</h5>
+                              <button type="button" class="close-2" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body p-5">
+                                <h2>Input question here</h2>
+                                <div>
+                                    <label for="answer_field" class="form-label">Put in your answer:</label>
+                                    <input type="email" class="form-control mb-3" id="answer_field">
+                                    <button type="submit" class="btn btn-primary btn-xl">Check your answer</button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                 </div>
             </div>
         </div>
     </section>
-    <!-- How Can You Help?-->
-    <section class="page-section" id="services">
-        <div class="container px-4 px-lg-5">
-            <h2 class="text-center mt-0">At Your Service</h2>
-            <hr class="divider" />
-            <div class="row gx-4 gx-lg-5">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Sturdy Themes</h3>
-                        <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Up to Date</h3>
-                        <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Ready to Publish</h3>
-                        <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Made with Love</h3>
-                        <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Portfolio-->
+
+    <!-- How can you help section -->
+    <div class="heading pt-4 pb-2 text-center bg-dark text-light">
+        <h2>How can you help end it?</h2>
+        <hr class="divider">
+    </div>
+
     <div id="portfolio">
         <div class="container-fluid p-0">
             <div class="row g-0">
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
+                    <div class="portfolio-box">
+                        <a href="https://missionwaco.org/" title="Mission Waco">
+                            <img class="img-fluid" src="assets/img/company_photos/mission-waco-resized.png" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">https://missionwaco.org/</div>
+                                <div class="project-name">Mission Waco</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
+                    <div class="portfolio-box">
+                        <a href="https://shepherdsheartpantry.org/" title="Shepherd's Heart">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">https://shepherdsheartpantry.org/</div>
+                                <div class="project-name">Shepherd's Heart</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="" />
                         <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
+                            <div class="project-category text-white-50">https://www.worldhungerrelief.org/#home</div>
+                            <div class="project-name">World Hunger Relief</div>
                         </div>
                     </a>
                 </div>
@@ -182,30 +170,14 @@
                     <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
                         <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
                         <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
-                        <div class="portfolio-box-caption p-3">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
+                            <div class="project-category text-white-50">https://www.caritas-waco.org/</div>
+                            <div class="project-name">Caritas</div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Call to action-->
-    <section class="page-section bg-dark text-white">
-        <div class="container px-4 px-lg-5 text-center">
-            <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-            <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
-        </div>
-    </section>
     <!-- Footer-->
     <footer class="bg-light py-5">
         <div class="container px-4 px-lg-5">
@@ -218,10 +190,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
 </body>
